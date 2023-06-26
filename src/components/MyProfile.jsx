@@ -2,7 +2,7 @@ import React from 'react'
 
 const MyProfile = () => {
   return (
-    <div>
+    <div className='container pt-3' >
     This is my profile
     </div>
   )

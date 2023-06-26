@@ -11,7 +11,7 @@ function Navbar() {
           <h4>Space Traveler's Hub</h4>
         </div>
         <div className="d-flex gap-4" >
-          <NavLink to='*'>Rockets</NavLink>         
+          <NavLink to='/rockets'>Rockets</NavLink>         
           <NavLink to='*'>Missions</NavLink>
           <span>|</span>
           <NavLink to='myprofile'>My profile</NavLink>

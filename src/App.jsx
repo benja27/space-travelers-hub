@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import MyProfile from './components/MyProfile';
 import NoPage from './components/NoPage';
+import Rockets from './components/RocketsComponent';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path='myprofile' element={<MyProfile/>}/>
-        <Route path='*' element={<NoPage/>}/>
+        <Route path='/rockets' element={ <Rockets></Rockets> }/>
       </Routes>
    
     </div>    
