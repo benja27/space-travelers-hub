@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../utilities/logo.png";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -10,9 +11,10 @@ function Navbar() {
           <h4>Space Traveler's Hub</h4>
         </div>
         <div className="d-flex gap-4" >
-          <a href="#">Rockets</a>
-          <a href="#">Missions</a>
-          <a href="#">My Profile</a>
+          <NavLink to='*'>Rockets</NavLink>         
+          <NavLink to='*'>Missions</NavLink>
+          <span>|</span>
+          <NavLink to='myprofile'>My profile</NavLink>
         </div>
       </div>
     </div>
