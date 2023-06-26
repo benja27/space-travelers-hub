@@ -33,9 +33,9 @@
 
 
 
-# 📖 Awsome Books With React <a name="about-project"></a>
+# 📖 Espace Traveler's Hub <a name="about-project"></a>
 
-**Awsome Books With React** is a... Describe your project in 1 or 2 sentences.
+**Espace Traveler's Hub** is a project where we connect this APP to the database of Space-X then we designed a application to use that data and being able to schedule a trip in one of the space-x space ships
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,6 +45,8 @@
   <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://reactjs.org/">Redux</a></li>
+    <li><a href="https://reactjs.org/">API</a></li>
   </ul>
 </details>
 
@@ -55,7 +57,7 @@
 <!-- > Describe between 1-3 key features of the application. -->
 
 - **[Use Create React APP]**
-- **[Use React Routes]**
+- **[It is connected to the Space-x API]**
 - **[Use React Redux]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
