@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import MyProfile from './components/MyProfile';
 import NoPage from './components/NoPage';
 import Rockets from './components/RocketsComponent';
+import Missions from './components/Missions';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='myprofile' element={<MyProfile/>}/>
         <Route path='/rockets' element={ <Rockets></Rockets> }/>
+        <Route path='/missions' element={ <Missions/> }/>
       </Routes>
    
     </div>    

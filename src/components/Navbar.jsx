@@ -12,7 +12,7 @@ function Navbar() {
         </div>
         <div className="d-flex gap-4" >
           <NavLink to='/rockets'>Rockets</NavLink>         
-          <NavLink to='*'>Missions</NavLink>
+          <NavLink to='/missions'>Missions</NavLink>
           <span>|</span>
           <NavLink to='myprofile'>My profile</NavLink>
         </div>
