@@ -1,6 +1,8 @@
-import React from 'react'
+
+import MissionCard from './MissionCard'
 
 const Missions = () => {
+
   return (
     <div className='container'>
  <table class="table table-bordered">
@@ -13,24 +15,7 @@ const Missions = () => {
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td className='col-9'></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td className='col-9'></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td className='col-9'></td>
-        <td></td>
-        <td></td>
-      </tr>
+    <MissionCard/>  
     </tbody>
   </table>
 
