@@ -152,6 +152,12 @@ I recomend Render since is easy to use
 - GitHub: [@githubhandle](https://github.com/benja27)
 - LinkedIn: [LinkedIn](http://www.linkedin.com/in/BenjaMendez2699)
 
+👤 Sylvester WAMAYA
+
+- GitHub: [@githubhandle](https://github.com/sylvester-wamaya)
+- Twitter: [@twitterhandle](https://twitter.com/The_Seal_)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sylvester-wamaya-b11a93112/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
