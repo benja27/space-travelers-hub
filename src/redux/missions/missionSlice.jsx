@@ -39,8 +39,6 @@ const missionSlice = createSlice({
         .addCase(fetchMissions.fulfilled, (state, action)=>{
             state.missions = action.payload
             state.isLoading = false
-            console.log(action.payload)
-            console.log(state.missions)
         })
         .addCase(fetchMissions.rejected, (state, action)=>{
             state.error = action.error.message
