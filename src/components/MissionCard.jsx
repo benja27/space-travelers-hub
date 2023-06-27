@@ -11,7 +11,7 @@ const MissionCard = ({name, description, member, id}) => {
       <tr>
         <td><b>{name}</b></td>
         <td className='col-9' style={{fontSize: '13px'}}>{description}</td>
-        <td style={{display: 'block', margin: 'auto'}}>
+        <td style={{verticalAlign: 'middle'}}>
             {
             member?(
             <button style={{fontSize: '10px', fontWeight: 'bold'}} className='btn btn-success btn-sm text-nowrap' type='button'>Active member</button>):(
@@ -19,7 +19,7 @@ const MissionCard = ({name, description, member, id}) => {
             }           
             
         </td>
-        <td style={{margin: "auto"}}>
+        <td style={{verticalAlign: 'middle'}}>
         {
             member?(
               
