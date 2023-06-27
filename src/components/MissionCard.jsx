@@ -1,8 +1,7 @@
 import React from 'react'
 
-const MissionCard = ({name, description}) => {
-    const member = false
-    const join = false
+const MissionCard = ({name, description, member}) => {
+
   return (
  
       <tr>
@@ -18,9 +17,11 @@ const MissionCard = ({name, description}) => {
         </td>
         <td>
         {
-            join?(
-            <button type='button'>Join Mission</button>):(
-            <button type='button'>Leave Mission</button>)
+            member?(
+              
+            <button type='button'>Leave Mission</button>):(
+            <button type='button'>Join Mission</button>
+            )
             }   
         </td>
       </tr>
