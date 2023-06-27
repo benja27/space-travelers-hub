@@ -3,8 +3,14 @@ import MissionCard from './MissionCard'
 import { useSelector } from 'react-redux'
 
 function Missions() {
-  const {missions} = useSelector((store)=>store.missions)
-    
+  const {missions, isLoading} = useSelector((store)=>store.missions)
+    if(isLoading){
+      return (
+        <button class="btn btn-primary">
+  <span class="spinner-border spinner-border-lg"></span>
+</button>
+      )
+    }
   return (
     <div className='container pt-3' >
          <table className="table table-bordered table-striped">
