@@ -30,6 +30,7 @@ function App() {
       <Routes>
         <Route path='myprofile' element={<MyProfile/>}/>
         <Route path='/rockets' element={ <Rockets></Rockets> }/>
+        <Route path='/' element={ <Rockets></Rockets> }/>
         <Route path='/missions' element={ <Missions></Missions> }/>
         <Route path='*' element={ <NoPage></NoPage> }/>
       </Routes>
