@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { joinMission } from '../redux/missions/missionSlice'
+import { joinMission, leaveMission } from '../redux/missions/missionSlice'
 
-const MissionCard = ({name, description, member}) => {
+const MissionCard = ({name, description, member, id}) => {
 
   const dispatch = useDispatch()
 
@@ -23,8 +23,8 @@ const MissionCard = ({name, description, member}) => {
         {
             member?(
               
-            <button type='button'>Leave Mission</button>):(
-            <button onClick={()=>dispatch(joinMission())} type='button'>Join Mission</button>
+            <button onClick={()=>dispatch(leaveMission(id))} type='button'>Leave Mission</button>):(
+            <button onClick={()=>dispatch(joinMission(id))} type='button'>Join Mission</button>
             )
             }   
         </td>

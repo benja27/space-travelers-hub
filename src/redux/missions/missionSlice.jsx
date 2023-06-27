@@ -23,12 +23,12 @@ const missionSlice = createSlice({
     initialState,
     reducers: {
         joinMission: (state, action)=>{
-            const mission = state.missions.find((item)=>item.id === action.payload)
+            const mission = state.missions.find((item)=>item.mission_id === action.payload)
             mission.member = true 
         },
         leaveMission: (state, action)=>{
-            const mission = state.missions.find((item)=>item.id === action.payload)
-            mission.member = true 
+            const mission = state.missions.find((item)=>item.mission_id === action.payload)
+            mission.member = false 
         }
     },
     extraReducers(builder){

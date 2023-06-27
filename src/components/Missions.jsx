@@ -19,7 +19,7 @@ function Missions() {
     <tbody>
         {
             missions.map((mission)=>(
-                <MissionCard name={mission.mission_name} description={mission.description} member={mission.member} key={mission.mission_id}/>
+                <MissionCard name={mission.mission_name} description={mission.description} member={mission.member} id={mission.mission_id} key={mission.mission_id}/>
             ))
        
 }
