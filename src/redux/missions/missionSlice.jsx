@@ -30,7 +30,25 @@ const missionSlice = createSlice({
             const mission = state.missions.find((item)=>item.id === action.payload)
             mission.member = true 
         }
+    },
+    extraReducers(builder){
+        builder
+        .addCase(fetchMissions.pending, (state)=>{
+            state.isLoading = true
+        })
+        .addCase(fetchMissions.fulfilled, (state, action)=>{
+            state.missions = action.payload
+            state.isLoading = false
+            console.log(action.payload)
+            console.log(state.missions)
+        })
+        .addCase(fetchMissions.rejected, (state, action)=>{
+            state.error = action.error.message
+            state.isLoading = false
+        })
+
     }
+    
 }
 )
 export const {joinMission, leaveMission} = missionSlice.actions
