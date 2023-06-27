@@ -3,16 +3,29 @@ import { useSelector } from "react-redux";
 
 const MyProfile = () => {
   const { rockets } = useSelector((data) => data.rockets);
+  const {missions} = useSelector((store)=>store.missions)
 
   return (
     <div className="container pt-3">
       <div className="row">
         <div className="col-6">
-          <h1>My Missions</h1>
+          <h2 className="pb-3">My Missions</h2>
+          {
+            missions.map((mission)=>{
+              if(mission.member){
+                return (
+                  
+                  <div key={mission.mission_id} className="row border border-3">
+                    <h4 className="py-3">{mission.mission_name}</h4>
+                  </div>
+                )
+              }
+            })
+          }
         </div>
 
         <div className="col-6">
-          <h1 className="pb-3">My Rockets</h1>
+          <h2 className="pb-3">My Rockets</h2>
 
           <div>
             {rockets.map((item) => {
