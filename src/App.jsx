@@ -8,13 +8,9 @@ import Missions from './components/Missions';
 import NoPage from './components/NoPage';
 import Rockets from './components/RocketsComponent';
 import { fetchRockets } from './redux/rockets/rocketSlice';
-import { fetchMissions } from './redux/missions/missionSlice';
 
 function App() {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchRockets());

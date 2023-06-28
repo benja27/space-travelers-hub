@@ -1,9 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import MissionCard from './MissionCard';
+import { fetchMissions } from '../redux/missions/missionSlice';
 
 function Missions() {
   const { missions, isLoading } = useSelector((store) => store.missions);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, [dispatch]);
+
   if (isLoading) {
     return (
       <button type="button" className="btn btn-primary">
