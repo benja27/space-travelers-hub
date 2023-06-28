@@ -1,9 +1,9 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-const MyProfile = () => {
+function MyProfile() {
   const { rockets } = useSelector((data) => data.rockets);
-  const {missions} = useSelector((store)=>store.missions)
+  const { missions } = useSelector((store) => store.missions);
 
   return (
     <div className="container pt-3">
@@ -11,14 +11,14 @@ const MyProfile = () => {
         <div className="col-6">
           <h2 className="pb-3">My Missions</h2>
           {
-            missions.map((mission)=>{
-              if(mission.member){
+            missions.map((mission) => {
+              if (mission.member) {
                 return (
-                  
+
                   <div key={mission.mission_id} className="row border border-3">
                     <h4 className="py-3">{mission.mission_name}</h4>
                   </div>
-                )
+                );
               }
             })
           }
@@ -35,15 +35,14 @@ const MyProfile = () => {
                     <h4 className="py-3">{item.name}</h4>
                   </div>
                 );
-              }else{
-                return null
               }
+              return null;
             })}
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default MyProfile;

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const NoPage = () => {
+function NoPage() {
   return (
     <div>
-     PAGE NOT FOUND
+      PAGE NOT FOUND
     </div>
-  )
+  );
 }
 
-export default NoPage
+export default NoPage;

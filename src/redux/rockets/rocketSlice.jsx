@@ -1,94 +1,69 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 // general config
 
 const initialState = {
-  rockets : [],
-  isLoading : true
-}
+  rockets: [],
+  isLoading: true,
+};
 
 const rocketSlice = createSlice({
-  name: "rocket slice",
+  name: 'rocket slice',
   initialState,
-  reducers : {
-    reserve : (state, action)=>{
-      let found = state.rockets.find((ele)=> ele.id === action.payload)
-      found.reserved = true      
+  reducers: {
+    reserve: (state, action) => {
+      const found = state.rockets.find((ele) => ele.id === action.payload);
+      found.reserved = true;
     },
-    cancelReserve : (state, action)=>{
-      let found = state.rockets.find((ele)=> ele.id === action.payload)
-      found.reserved = false      
-    }
+    cancelReserve: (state, action) => {
+      const found = state.rockets.find((ele) => ele.id === action.payload);
+      found.reserved = false;
+    },
   },
-  extraReducers : (builder) => {
+  extraReducers: (builder) => {
     builder
-      .addCase(fetchRockets.fulfilled, (state, action)=>{
-        state.rockets = action.payload
-        state.isLoading = false
-      }) 
-  }
-})
-export const {reserve, cancelReserve} = rocketSlice.actions
-
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        state.rockets = action.payload;
+        state.isLoading = false;
+      });
+  },
+});
+export const { reserve, cancelReserve } = rocketSlice.actions;
 
 // extra reducers
 
-let url = "https://api.spacexdata.com/v3/rockets";
+const url = 'https://api.spacexdata.com/v3/rockets';
 
-export const fetchRockets = createAsyncThunk('fetch rockets',  
+export const fetchRockets = createAsyncThunk(
+  'fetch rockets',
 
-  async ()=>{
+  async () => {
     try {
-      const res = await axios(url)      
+      const res = await axios(url);
 
-      let rocketsInfo = []
+      const rocketsInfo = [];
 
-
-
-      res.data.forEach((item)=>{
-        let piece = {
+      res.data.forEach((item) => {
+        const piece = {
           id: item.id,
           name: item.rocket_name,
           type: item.rocket_type,
-          img : item.flickr_images[0],
-          description : item.description,
-          reserved : false
+          img: item.flickr_images[0],
+          description: item.description,
+          reserved: false,
 
-
-
-        }
-        rocketsInfo.push(piece)
-      })
+        };
+        rocketsInfo.push(piece);
+      });
 
       // console.log(rocketsInfo)
 
-
-      return rocketsInfo
+      return rocketsInfo;
     } catch (error) {
-      
+
     }
-  }
-)
+  },
+);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export default rocketSlice.reducer
+export default rocketSlice.reducer;

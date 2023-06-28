@@ -1,16 +1,18 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { reserve, cancelReserve } from "../redux/rockets/rocketSlice";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { reserve, cancelReserve } from '../redux/rockets/rocketSlice';
 
-function Rocket({ id, name, type, img, description, reserved }) {
-  let n = Math.floor(Math.random() * 2);
+function Rocket({
+  id, name, type, img, description, reserved,
+}) {
+  const n = Math.floor(Math.random() * 2);
   // console.log(reserved)
   const dispatch = useDispatch();
 
   return (
     <>
       <div className="col-4 pb-3">
-        <img style={{ width: "100%" }} src={img} alt="" />
+        <img style={{ width: '100%' }} src={img} alt="" />
       </div>
       <div className="col-8">
         <h3>{name}</h3>
@@ -18,7 +20,7 @@ function Rocket({ id, name, type, img, description, reserved }) {
           {reserved ? (
             <span className="badge bg-success text-white me-1">Reserved</span>
           ) : (
-            ""
+            ''
           )}
           {description}
         </h6>
