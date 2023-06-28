@@ -1,14 +1,7 @@
-import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../utilities/logo.png';
 
 function Navbar() {
-  const [link, setLink] = useState(null);
-
-  const handleClick = (id) => {
-    setLink(id);
-  };
-
   return (
     <div className="navbar navbar-light bg-light">
       <div className="container">
@@ -17,14 +10,14 @@ function Navbar() {
           <h4>Space Traveler Hub</h4>
         </div>
         <div className="d-flex gap-4 links-container">
-          <NavLink className={link === 1 ? 'underline' : ''} onClick={() => handleClick(1)} to="/rockets">
+          <NavLink to="/rockets">
             Rockets
           </NavLink>
-          <NavLink className={link === 2 ? 'underline' : ''} onClick={() => handleClick(2)} to="/missions">
+          <NavLink to="/missions">
             Missions
           </NavLink>
           <span>| </span>
-          <NavLink className={link === 3 ? 'underline' : ''} onClick={() => handleClick(3)} to="myprofile">
+          <NavLink to="myprofile">
             My profile
           </NavLink>
         </div>

@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
 }
-.underline {
+
+.active {
   text-decoration: underline;
 }
