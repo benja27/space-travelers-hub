@@ -14,11 +14,11 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMissions());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchRockets());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'; // eslint-disable-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types'; 
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../redux/missions/missionSlice';
