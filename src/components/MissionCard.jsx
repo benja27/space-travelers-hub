@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'; // eslint-disable-line import/no-extraneous-dependencies
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../redux/missions/missionSlice';
@@ -34,4 +35,10 @@ function MissionCard({
   );
 }
 
+MissionCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  member: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};
 export default MissionCard;

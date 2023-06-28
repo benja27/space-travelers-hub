@@ -14,7 +14,7 @@ function Navbar() {
       <div className="container">
         <div className="d-flex gap-4 align-items-center">
           <img style={{ width: '50px' }} src={logo} alt="" />
-          <h4>Space Traveler's Hub</h4>
+          <h4>Space Traveler Hub</h4>
         </div>
         <div className="d-flex gap-4 links-container">
           <NavLink className={link === 1 ? 'underline' : ''} onClick={() => handleClick(1)} to="/rockets">

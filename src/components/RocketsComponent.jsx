@@ -16,7 +16,16 @@ function Rockets() {
   return (
     <div className="container pt-3">
       <div className="row">
-        {rockets.map((rocket, index) => <Rocket key={index} {...rocket} />)}
+        {rockets.map((rocket) => (
+          <Rocket
+            key={Math.random()}
+            id={rocket.id}
+            name={rocket.name}
+            img={rocket.img}
+            description={rocket.description}
+            reserved={rocket.reserved}
+          />
+        ))}
       </div>
     </div>
   );

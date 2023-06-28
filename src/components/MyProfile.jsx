@@ -20,6 +20,7 @@ function MyProfile() {
                   </div>
                 );
               }
+              return null;
             })
           }
         </div>

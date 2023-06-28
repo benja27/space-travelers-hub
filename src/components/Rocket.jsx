@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types'; // eslint-disable-line import/no-extraneous-dependencies
+
 import { reserve, cancelReserve } from '../redux/rockets/rocketSlice';
 
 function Rocket({
-  id, name, type, img, description, reserved,
+  id, name, img, description, reserved,
 }) {
-  const n = Math.floor(Math.random() * 2);
-  // console.log(reserved)
   const dispatch = useDispatch();
 
   return (
@@ -46,5 +46,13 @@ function Rocket({
     </>
   );
 }
+
+Rocket.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+};
 
 export default Rocket;
