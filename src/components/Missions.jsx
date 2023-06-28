@@ -1,21 +1,27 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import MissionCard from './MissionCard';
 import { fetchMissions } from '../redux/missions/missionSlice';
 
 function Missions() {
-  const { missions, isLoading } = useSelector((store) => store.missions);
+  const { missions, isLoading, status} = useSelector((store) => store.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
+    if(missions.length === 0){
+      dispatch(fetchMissions());
+    }
+   
+  }, [dispatch, missions]);
 
   if (isLoading) {
     return (
-      <button type="button" className="btn btn-primary">
-        <span className="spinner-border spinner-border-lg" />
-      </button>
+      <div className="-100 d-flex align-items-center justify-content-center">
+        <button type="button" className="btn btn-primary">
+          <span className="spinner-border spinner-border-lg" />
+        </button>
+      </div>
     );
   }
   return (
