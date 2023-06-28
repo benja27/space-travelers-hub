@@ -33,8 +33,6 @@ export const fetchRockets = createAsyncThunk(
         rocketsInfo.push(piece);
       });
 
-      // console.log(rocketsInfo)
-
       return rocketsInfo;
     } catch (error) {
       throw new Error();
