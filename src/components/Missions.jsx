@@ -1,18 +1,16 @@
-/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import MissionCard from './MissionCard';
 import { fetchMissions } from '../redux/missions/missionSlice';
 
 function Missions() {
-  const { missions, isLoading, status} = useSelector((store) => store.missions);
+  const { missions, isLoading } = useSelector((store) => store.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if(missions.length === 0){
+    if (missions.length === 0) {
       dispatch(fetchMissions());
     }
-   
   }, [dispatch, missions]);
 
   if (isLoading) {

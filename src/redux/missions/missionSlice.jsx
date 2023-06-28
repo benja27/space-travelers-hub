@@ -20,7 +20,6 @@ export const fetchMissions = createAsyncThunk('fetchMissions', async () => {
       };
       missionsArray.push(missionItem);
     });
-    console.log(missionsArray);
     return missionsArray;
   } catch (error) {
     return error;
