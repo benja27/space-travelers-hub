@@ -38,7 +38,7 @@ function MissionCard({
 MissionCard.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  member: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  member: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
 };
 export default MissionCard;
