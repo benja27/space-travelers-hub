@@ -30,7 +30,6 @@ function Missions() {
             <th>Mission</th>
             <th className="col-9">Description</th>
             <th>Status</th>
-            {/* <th />  */}
           </tr>
         </thead>
         <tbody>

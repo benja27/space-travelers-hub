@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// import axios from 'axios';
 
 const missionsUrl = 'https://api.spacexdata.com/v3/missions';
 
