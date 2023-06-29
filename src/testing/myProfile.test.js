@@ -5,7 +5,7 @@ import MyProfile from '../components/MyProfile';
 import store from '../redux/mainStore';
 
 test('testing', () => {
-  const { test } = render(
+  render(
     <Provider store={store}>
       <MyProfile />
     </Provider>,

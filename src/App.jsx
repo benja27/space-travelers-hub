@@ -7,12 +7,6 @@ import NoPage from './components/NoPage';
 import Rockets from './components/RocketsComponent';
 
 function App() {
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchRockets());
-  // }, [dispatch]);
-
   return (
     <div>
 

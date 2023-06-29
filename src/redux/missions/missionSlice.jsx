@@ -13,8 +13,6 @@ export const fetchMissions = createAsyncThunk('fetchMissions', async () => {
   try {
     const response = await fetch(missionsUrl);
     const res = await response.json();
-    // console.log(res);
-
     const missionsArray = [];
     res.forEach((item) => {
       const missionItem = {
