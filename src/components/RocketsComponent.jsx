@@ -1,8 +1,15 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Rocket from './Rocket';
+import { fetchRockets } from '../redux/rockets/rocketSlice';
 
 function Rockets() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, [dispatch]);
+
   const { rockets, isLoading } = useSelector((data) => data.rockets);
 
   if (isLoading) {
