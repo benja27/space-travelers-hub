@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 // general config
 
@@ -17,11 +16,12 @@ export const fetchRockets = createAsyncThunk(
 
   async () => {
     try {
-      const res = await axios(url);
+      const response = await fetch(url);
+      const res = await response.json();
 
       const rocketsInfo = [];
 
-      res.data.forEach((item) => {
+      res.forEach((item) => {
         const piece = {
           id: item.id,
           name: item.rocket_name,
@@ -32,8 +32,6 @@ export const fetchRockets = createAsyncThunk(
         };
         rocketsInfo.push(piece);
       });
-
-      // console.log(rocketsInfo)
 
       return rocketsInfo;
     } catch (error) {
