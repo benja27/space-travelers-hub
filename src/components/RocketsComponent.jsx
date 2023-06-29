@@ -5,12 +5,13 @@ import { fetchRockets } from '../redux/rockets/rocketSlice';
 
 function Rockets() {
   const dispatch = useDispatch();
+  const { rockets, isLoading } = useSelector((data) => data.rockets);
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
-
-  const { rockets, isLoading } = useSelector((data) => data.rockets);
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, rockets]);
 
   if (isLoading) {
     return (
