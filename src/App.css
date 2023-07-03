@@ -2,6 +2,28 @@ a {
   text-decoration: none;
 }
 
+.check,
+.check *{
+  border: 1px solid black;
+}
+
+
 .active {
   text-decoration: underline;
 }
+
+.chatbox {
+  position: fixed ;
+  right: 0;
+  bottom: 0;
+}
+.footer{
+  height: 50px;
+}
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+
+}
+
