@@ -16,8 +16,8 @@ function MissionCard({
       <td style={{ verticalAlign: 'middle' }}>
         {
             member ? (
-              <button style={{ fontSize: '10px', fontWeight: 'bold' }} className="btn btn-success btn-sm text-nowrap" type="button">Active member</button>) : (
-                <button style={{ fontSize: '9px', fontWeight: 'bold' }} className="btn btn-sm text-nowrap btn-secondary" type="button">NOT A MEMBER</button>)
+              <button style={{ fontSize: '10px', fontWeight: 'bold' }} className="btn btn-danger btn-md text-nowrap" type="button">Active member</button>) : (
+                <button style={{ fontSize: '9px', fontWeight: 'bold' }} className="btn btn-md text-nowrap btn-dark" type="button">NOT A MEMBER</button>)
             }
 
       </td>
@@ -25,8 +25,8 @@ function MissionCard({
         {
             member ? (
 
-              <button style={{ fontSize: '10px', fontWeight: 'bold' }} className="btn btn-outline-danger btn-sm text-nowrap" onClick={() => dispatch(leaveMission(id))} type="button">Leave Mission</button>) : (
-                <button style={{ fontSize: '10px', fontWeight: 'bold' }} className="btn btn-sm text-nowrap btn-outline-secondary" onClick={() => dispatch(joinMission(id))} type="button">Join Mission</button>
+              <button style={{ fontSize: '10px', fontWeight: 'bold' }} className="btn btn-success text-white btn-outline-danger btn-md text-nowrap" onClick={() => dispatch(leaveMission(id))} type="button">Leave Mission</button>) : (
+                <button style={{ fontSize: '10px', fontWeight: 'bold' }} className="btn btn-md text-nowrap btn-outline-secondary btn-primary text-white " onClick={() => dispatch(joinMission(id))} type="button">Join Mission</button>
             )
             }
       </td>
